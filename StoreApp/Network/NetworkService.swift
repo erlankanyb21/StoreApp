@@ -6,15 +6,23 @@
 //
 
 import Foundation
+import Alamofire
 
 class NetworkService {
-    
     func fetchProducts() async throws -> [Products] {
-        guard let url = URL(string: "https://fakestoreapi.com/products") else {
-            throw URLError(.badURL)
+        let response = await AF.request("https://fakestoreapi.com/products")
+            .validate()
+            .serializingDecodable([Products].self)
+            .response
+        
+        if let statusCode = response.response?.statusCode {
+            print("Status code: \(statusCode)")
         }
         
-        let (data, _) = try await URLSession.shared.data(from: url)
-        return try JSONDecoder().decode([Products].self, from: data)
+        let data = try response.result.get()
+        
+        print(data)
+        
+        return try response.result.get()
     }
 }

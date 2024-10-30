@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		CE70E90A2CD26B1400D0A887 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CE70E9092CD26B1400D0A887 /* Alamofire */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		CE6BCF452CD0F6BE00B30E87 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE70E90A2CD26B1400D0A887 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +117,7 @@
 			);
 			name = StoreApp;
 			packageProductDependencies = (
+				CE70E9092CD26B1400D0A887 /* Alamofire */,
 			);
 			productName = StoreApp;
 			productReference = CE6BCF322CD0F6BC00B30E87 /* StoreApp.app */;
@@ -195,6 +201,9 @@
 			);
 			mainGroup = CE6BCF292CD0F6BC00B30E87;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				CE70E9082CD267EF00D0A887 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = CE6BCF332CD0F6BC00B30E87 /* Products */;
 			projectDirPath = "";
@@ -558,6 +567,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CE70E9082CD267EF00D0A887 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CE70E9092CD26B1400D0A887 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE70E9082CD267EF00D0A887 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CE6BCF2A2CD0F6BC00B30E87 /* Project object */;
 }
